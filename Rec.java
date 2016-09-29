@@ -43,3 +43,9 @@ public static void main(String args[]) {
 	System.out.println("With the last Squareroot, the final result is(" + xValue+ ") presenting an error value of " + EValue + " which comes out to be " + finalGuess);
 }
 
+public static double Sqrt(double X, double guess, double eror){
+    //Will give the error value this way
+    double value = Math.abs(X - (guess * guess));
+    System.out.println("Your guess for the error " + value + " comes out to be " + guess);
+    //This if statement will let the user know if the error entered is greater than the limit of the actual error.
+    if (value > eror)
