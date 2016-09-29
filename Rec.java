@@ -22,3 +22,24 @@ public static void main(String args[]) {
 
 }
 
+//This while loop will make sure that the user can only enter a number for the error that is greater than 0.
+	while  (EValue <= 0) {
+		System.out.print("Please input a proper value for the error: ");
+		EValue = input.nextDouble();
+
+	/*
+	*This if statement will let the user know that if a value entered for the error is 0 it will create a heap exception that will go deep into the recursion process
+	*Also lets the user to know to enter a non negative number
+	*/
+	if (EValue <=0) {
+			System.out.println("The number 0 as value should be used or else a heap exception may occur. The value entered for error should be a number that is of the non negative variety.");
+		}
+	}
+
+	double firstGuess = xValue / 2;
+
+	finalGuess = Sqrt(xValue, firstGuess, EValue);
+
+	System.out.println("With the last Squareroot, the final result is(" + xValue+ ") presenting an error value of " + EValue + " which comes out to be " + finalGuess);
+}
+
